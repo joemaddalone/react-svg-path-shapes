@@ -1,7 +1,7 @@
 {
   "name": "react-svg-path-shapes",
   "version": "1.0.0",
-  "description": "Shapes macros for react-svg-path",
+  "description": "Shape macros for react-svg-path",
   "author": "joemaddalone",
   "license": "MIT",
   "repository": "joemaddalone/react-svg-path-shapes",
@@ -49,5 +49,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "react-svg-path": "^1.0.3"
+  }
 }
