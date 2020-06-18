@@ -2,7 +2,7 @@ import Path from 'react-svg-path'
 
 Path.macro('square', function (size, x, y) {
   if (x && y) {
-    this.M(x, y) // only move if x & y are defined
+    this.M(x - size / 2, y - size / 2) // only move if x & y are defined
   }
   this.right(size).down(size).left(size).up(size)
   return this
@@ -16,6 +16,7 @@ Path.macro('circle', function (size, x, y) {
   this.m(-radius, 0)
     .a(radius, radius, 0, 1, 0, radius * 2, 0)
     .a(radius, radius, 0, 1, 0, -(radius * 2), 0)
+    .close()
   return this
 })
 
@@ -71,3 +72,14 @@ Path.macro('stepline', function (x, y, width, data) {
   })
   return this
 })
+
+Path.macro('polygon', function (x, y, ...rest) {
+  this.moveTo(x, y)
+  rest.forEach((val) => {
+    this.L.apply(null, val)
+  })
+  this.close()
+  return this
+})
+
+export default Path

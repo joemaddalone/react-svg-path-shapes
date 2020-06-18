@@ -7,7 +7,6 @@
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-scripts": "file:../node_modules/react-scripts",
-    "react-svg-path": "^1.0.3",
     "react-svg-path-shapes": "file:.."
   },
   "scripts": {
