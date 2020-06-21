@@ -3,6 +3,7 @@ import Path from 'react-svg-path-shapes'
 
 const data = [-10, -45, 10, 0, 35, 10, -9, 25, 15, 75]
 
+
 const App = () => {
   return (
     <div>
@@ -26,6 +27,14 @@ const App = () => {
           style={{ fill: 'rebeccapurple' }}
         />
       </svg>
+      <h2>.triangle()</h2>
+      <svg width={110} height={110}>
+        <path d={new Path().triangle(95, 50, 60).toString()} />
+        <path
+          d={new Path().triangle(10, 50, 60).toString()}
+          style={{ fill: 'rebeccapurple' }}
+        />
+      </svg>
       <h2>.polyline()</h2>
       <svg width={260} height={160}>
         <path d={new Path().polyline(10, 100, 240, data).toString()} />
@@ -36,7 +45,11 @@ const App = () => {
       </svg>
       <h2>.polygon()</h2>
       <svg width={800} height={160}>
-        <path d={new Path().polygon(10,60, [40, 0], [70, 60], [40, 120]).toString()} />
+        <path
+          d={new Path()
+            .polygon(10, 60, [40, 0], [70, 60], [40, 120])
+            .toString()}
+        />
       </svg>
       <h2>combining shapes</h2>
       <svg width={305} height={155}>

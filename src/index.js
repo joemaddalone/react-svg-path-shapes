@@ -20,14 +20,6 @@ Path.macro('circle', function (size, x, y) {
   return this
 })
 
-Path.macro('triangle', function (w, h, x, y) {
-  this.M(x, y) // only move if x & y are defined
-    .l(-w / 2, h)
-    .right(w)
-    .L(x, y)
-  return this
-})
-
 Path.macro('grid', function (x, y, width, height, cols, rows, close = true) {
   const extra = close ? 1 : 0
   const colWidth = width / cols
@@ -45,7 +37,6 @@ Path.macro('grid', function (x, y, width, height, cols, rows, close = true) {
   }
   return this
 })
-// [-10, -45, 10, 0, 35, 10, -9, 25, 15, 75]
 Path.macro('polyline', function (x, y, width, data) {
   this.moveTo(x, y)
   const pointDistance = parseInt(width / data.length)
@@ -79,6 +70,19 @@ Path.macro('polygon', function (x, y, ...rest) {
     this.L.apply(null, val)
   })
   this.close()
+  return this
+})
+
+Path.macro('triangle', function (size, x, y) {
+  const sq3 = Math.sqrt(3)
+  const a = [x, y - (sq3 / 3) * size]
+  const b = [x - size / 2, y + (sq3 / 6) * size]
+  const c = [x + size / 2, y + (sq3 / 6) * size]
+
+  this.moveTo(...a)
+    .lineTo(...b)
+    .lineTo(...c)
+    .close()
   return this
 })
 
