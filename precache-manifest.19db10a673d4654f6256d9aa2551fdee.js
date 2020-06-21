@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "746621c9afc0bcba2db3a5524a044522",
+    "revision": "0c9a24fba156e893226f086336425fd2",
     "url": "/react-svg-path-shapes/index.html"
   },
   {
-    "revision": "b292cefed053e8682f8f",
+    "revision": "265972d21aef799631a7",
     "url": "/react-svg-path-shapes/static/css/main.16ded3dd.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-svg-path-shapes/static/js/2.6fe8a61a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b292cefed053e8682f8f",
-    "url": "/react-svg-path-shapes/static/js/main.eb1ed8e0.chunk.js"
+    "revision": "265972d21aef799631a7",
+    "url": "/react-svg-path-shapes/static/js/main.787ad0be.chunk.js"
   },
   {
     "revision": "a73f330fe612dba988f3",
