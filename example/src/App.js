@@ -1,67 +1,59 @@
 import React from 'react'
 import Path from 'react-svg-path-shapes'
+import {
+  Rect,
+  Square,
+  Circle,
+  Ellipse,
+  Segment,
+  Sector,
+  Polygon,
+  Triangle,
+  Polyline
+} from './components/demos'
 
-const data = [-10, -45, 10, 0, 35, 10, -9, 25, 15, 75]
-
+const data = [-10, -45, 10, 0, -55, 10, -9, 25, 15, 80]
 
 const App = () => {
   return (
     <div>
-      <h2>.grid()</h2>
-      <svg width={250} height={250}>
-        <path d={new Path().grid(1, 1, 248, 248, 10, 10).toString()} />
-      </svg>
-      <h2>.square()</h2>
-      <svg width={120} height={120}>
-        <path d={new Path().square(100, 50, 50).toString()} />
+      <h2 className='ui-header'>react-svg-path-shapes</h2>
+      <a href='https://github.com/joemaddalone/react-svg-path-shapes'>
+        https://github.com/joemaddalone/react-svg-path-shapes
+      </a>
+
+      <h3 className='ui-header'>Demos</h3>
+      <h2>.rect(width, height, x, y)</h2>
+      <Rect />
+      <h2>.square(size, x, y)</h2>
+      <Square />
+      <h2>.ellipse(width, height, x, y)</h2>
+      <Ellipse />
+      <h2>.circle(size, x, y)</h2>
+      <Circle />
+      <h2>.sector(x, y, radius, startAngle, endAngle)</h2>
+      <Sector />
+      <h2>.segment(x, y, radius, startAngle, endAngle)</h2>
+      <Segment />
+      <h2>.triangle(size, x, y)</h2>
+      <Triangle />
+      <h2>.polyline(points, relative = false)</h2>
+      <Polyline />
+      <h2>.polygon(points, relative = false)</h2>
+      <Polygon />
+      {/* <h2>.grid()</h2>
+      <Grid /> */}
+      {/* <h2>combining shapes</h2>
+      <svg width={202} height={250}>
         <path
-          d={new Path().square(10, 50, 50).toString()}
-          style={{ fill: 'rebeccapurple' }}
-        />
-      </svg>
-      <h2>.circle()</h2>
-      <svg width={110} height={120}>
-        <path d={new Path().circle(95, 50, 50).toString()} />
-        <path
-          d={new Path().circle(10, 50, 50).toString()}
-          style={{ fill: 'rebeccapurple' }}
-        />
-      </svg>
-      <h2>.triangle()</h2>
-      <svg width={110} height={110}>
-        <path d={new Path().triangle(95, 50, 60).toString()} />
-        <path
-          d={new Path().triangle(10, 50, 60).toString()}
-          style={{ fill: 'rebeccapurple' }}
-        />
-      </svg>
-      <h2>.polyline()</h2>
-      <svg width={260} height={160}>
-        <path d={new Path().polyline(10, 100, 240, data).toString()} />
-      </svg>
-      <h2>.stepline()</h2>
-      <svg width={800} height={160}>
-        <path d={new Path().stepline(10, 100, 250, data).toString()} />
-      </svg>
-      <h2>.polygon()</h2>
-      <svg width={800} height={160}>
-        <path
-          d={new Path()
-            .polygon(10, 60, [40, 0], [70, 60], [40, 120])
-            .toString()}
-        />
-      </svg>
-      <h2>combining shapes</h2>
-      <svg width={305} height={155}>
-        <path
-          d={new Path().grid(0, 0, 300, 150, 10, 10).toString()}
+          d={new Path().grid(0, 0, 200, 200, 10, 10).toString()}
           style={{ stroke: '#ccc' }}
         />
         <path
-          d={new Path().polyline(0, 100, 300, data).toString()}
+          d={new Path().polyline(data.concat(data)).toString()}
           style={{ stroke: 'green', strokeWidth: 2 }}
         />
-      </svg>
+      </svg> */}
     </div>
   )
 }
