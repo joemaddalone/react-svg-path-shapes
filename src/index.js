@@ -9,9 +9,29 @@ const polarToCartesian = (centerX, centerY, radius, angleInDegrees) => {
   }
 }
 
-Path.macro('rect', function (width, height, x, y) {
-  if (x && y) {
+const xYCheck = (x, y) => {
+  if (y === null) {
+    return false
+  }
+  if (x === null) {
+    return false
+  }
+  if (isNaN(x)) {
+    return false
+  }
+
+  if (isNaN(y)) {
+    return false
+  }
+
+  return true
+}
+
+Path.macro('rect', function (width, height, x = null, y = null) {
+  if (xYCheck(x, y)) {
     this.M(x - width / 2, y - height / 2) // only move if x & y are defined
+  } else {
+    this.m(0, 0)
   }
   this.right(width).down(height).left(width).up(height)
   return this
@@ -21,10 +41,12 @@ Path.macro('square', function (size, x, y) {
   return this.rect(size, size, x, y)
 })
 
-Path.macro('circle', function (size, x, y) {
+Path.macro('circle', function (size, x = null, y = null) {
   // return this.ellipse(size, size, x, y)
-  if (x && y) {
+  if (xYCheck(x, y)) {
     this.M(x, y) // only move if x & y are defined
+  } else {
+    this.m(0, 0)
   }
   const radius = size / 2
   this.m(-radius, 0)
@@ -79,11 +101,12 @@ Path.macro('grid', function (x, y, width, height, cols, rows, close = true) {
 // })
 
 Path.macro('polyline', function (points, relative = false) {
-  const start = points.shift()
+  const clone = [...points]
+  const start = clone.shift()
   const move = relative ? this.m : this.M
   const line = relative ? this.l : this.L
   move.apply(null, start)
-  points.forEach((val) => {
+  clone.forEach((val) => {
     line.apply(null, val)
   })
   return this
@@ -107,7 +130,7 @@ Path.macro('polygon', function (points, relative = false) {
 //   return this
 // })
 
-Path.macro('triangle', function (size, x, y) {
+Path.macro('triangle', function (size, x = 0, y = 0) {
   const sq3 = Math.sqrt(3)
   const a = [x, y - (sq3 / 3) * size]
   const b = [x - size / 2, y + (sq3 / 6) * size]

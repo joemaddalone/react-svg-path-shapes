@@ -18,7 +18,8 @@ path {
 }
 
 path.filled {
-  fill: rebeccapurple;
+  fill: #ddd;
+  stroke-width: 0;
 }
 p,
 li {

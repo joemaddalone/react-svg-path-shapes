@@ -1,5 +1,4 @@
 import React from 'react'
-import Path from 'react-svg-path-shapes'
 import {
   Rect,
   Square,
@@ -12,8 +11,6 @@ import {
   Polyline
 } from './components/demos'
 
-const data = [-10, -45, 10, 0, -55, 10, -9, 25, 15, 80]
-
 const App = () => {
   return (
     <div>
@@ -21,25 +18,26 @@ const App = () => {
       <a href='https://github.com/joemaddalone/react-svg-path-shapes'>
         https://github.com/joemaddalone/react-svg-path-shapes
       </a>
-
-      <h3 className='ui-header'>Demos</h3>
-      <h2>.rect(width, height, x, y)</h2>
+      <h2 className='ui-header'>Demos</h2>
+      <h3 className='ui-header'>.rect(width, height, x = null, y = null)</h3>
       <Rect />
-      <h2>.square(size, x, y)</h2>
+      <h3 className='ui-header'>.square(size, x = null, y = null)</h3>
       <Square />
-      <h2>.ellipse(width, height, x, y)</h2>
+      <h3 className='ui-header'>.ellipse(width, height, x, y)</h3>
       <Ellipse />
-      <h2>.circle(size, x, y)</h2>
+      <h3 className='ui-header'>.circle(size, x, y)</h3>
       <Circle />
-      <h2>.sector(x, y, radius, startAngle, endAngle)</h2>
+      <h3 className='ui-header'>.sector(x, y, radius, startAngle, endAngle)</h3>
       <Sector />
-      <h2>.segment(x, y, radius, startAngle, endAngle)</h2>
+      <h3 className='ui-header'>
+        .segment(x, y, radius, startAngle, endAngle)
+      </h3>
       <Segment />
-      <h2>.triangle(size, x, y)</h2>
+      <h3 className='ui-header'>.triangle(size, x, y)</h3>
       <Triangle />
-      <h2>.polyline(points, relative = false)</h2>
+      <h3 className='ui-header'>.polyline(points, relative = false)</h3>
       <Polyline />
-      <h2>.polygon(points, relative = false)</h2>
+      <h3 className='ui-header'>.polygon(points, relative = false)</h3>
       <Polygon />
       {/* <h2>.grid()</h2>
       <Grid /> */}
