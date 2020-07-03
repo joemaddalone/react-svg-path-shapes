@@ -10,17 +10,11 @@ const polarToCartesian = (centerX, centerY, radius, angleInDegrees) => {
 }
 
 const xYCheck = (x, y) => {
-  if (y === null) {
-    return false
-  }
-  if (x === null) {
-    return false
-  }
-  if (isNaN(x)) {
+  if (y === null || x === null) {
     return false
   }
 
-  if (isNaN(y)) {
+  if (isNaN(x) || isNaN(y)) {
     return false
   }
 
@@ -113,7 +107,7 @@ Path.macro('polyline', function (points, relative = false) {
 })
 
 Path.macro('polygon', function (points, relative = false) {
-  this.polyline(points).close()
+  this.polyline(points, relative).close()
   return this
 })
 
@@ -130,17 +124,23 @@ Path.macro('polygon', function (points, relative = false) {
 //   return this
 // })
 
-Path.macro('triangle', function (size, x = 0, y = 0) {
+Path.macro('triangle', function (size, x, y) {
   const sq3 = Math.sqrt(3)
-  const a = [x, y - (sq3 / 3) * size]
-  const b = [x - size / 2, y + (sq3 / 6) * size]
-  const c = [x + size / 2, y + (sq3 / 6) * size]
+  const relative = !xYCheck(x, y)
 
-  this.moveTo(...a)
-    .lineTo(...b)
-    .lineTo(...c)
-    .close()
-  return this
+  let a, b, c
+
+  if (relative) {
+    a = [size / 3.33, (sq3 / 3) * size * -1 + size / 15]
+    b = [-(size / 2), (sq3 / 6) * size * 3]
+    c = [size, 0]
+  } else {
+    a = [x, y - (sq3 / 3) * size]
+    b = [x - size / 2, y + (sq3 / 6) * size]
+    c = [x + size / 2, y + (sq3 / 6) * size]
+  }
+
+  return this.polygon([a, b, c], relative)
 })
 
 Path.macro('sector', function (x, y, radius, startAngle, endAngle) {
