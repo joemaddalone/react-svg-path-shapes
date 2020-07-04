@@ -34,8 +34,8 @@ const App = () => {
       <Square />
       <h3 className='ui-header'>.triangle(size, cx, cy)</h3>
       <p>
-        .triangle is drawn from center point (cx & cy). The cursor is then moved
-        to the center point.
+        .triangle draws an equilateral triangle from center point (cx & cy). The
+        cursor is then moved to the center point.
       </p>
       <Triangle />
       <h3 className='ui-header'>.regPolygon(size, sides, cx, cy)</h3>
@@ -72,9 +72,19 @@ const App = () => {
         to the center point.
       </p>
       <Segment />
-      <h3 className='ui-header'>.polyline(points, relative = false)</h3>
+      <h3 className='ui-header'>.polyline([points], relative = false)</h3>
+      <p>
+        .polyline accepts an array of [x, y] coordinates and then draws lines
+        connecting those points. The path will start from the first point and
+        end on the last. points can be absolute or relative.
+      </p>
       <Polyline />
-      <h3 className='ui-header'>.polygon(points, relative = false)</h3>
+      <h3 className='ui-header'>.polygon([points])</h3>
+      <p>
+        .polygon accepts an array of [x, y] coordinates and then draws lines
+        connecting those points. The path will start from the first point and
+        end on the first point - closing the shape.
+      </p>
       <Polygon />
     </div>
   );

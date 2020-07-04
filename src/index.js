@@ -53,8 +53,8 @@ Path.macro('polyline', function (points, relative = false) {
   return this;
 });
 
-Path.macro('polygon', function (points, relative = false) {
-  this.polyline(points, relative).close();
+Path.macro('polygon', function (points) {
+  this.polyline(points).close();
   return this;
 });
 
