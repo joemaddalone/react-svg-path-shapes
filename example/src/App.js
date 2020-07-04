@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Rect,
   Square,
@@ -9,7 +9,7 @@ import {
   Polygon,
   Triangle,
   Polyline
-} from './components/demos'
+} from './components/demos';
 
 const App = () => {
   return (
@@ -19,41 +19,28 @@ const App = () => {
         https://github.com/joemaddalone/react-svg-path-shapes
       </a>
       <h2 className='ui-header'>Demos</h2>
-      <h3 className='ui-header'>.rect(width, height, x = null, y = null)</h3>
+      <h3 className='ui-header'>.rect(width, height, cx, cy)</h3>
       <Rect />
-      <h3 className='ui-header'>.square(size, x = null, y = null)</h3>
+      <h3 className='ui-header'>.square(size, cx, cy)</h3>
       <Square />
-      <h3 className='ui-header'>.ellipse(width, height, x, y)</h3>
+      <h3 className='ui-header'>.ellipse(width, height, cx, cy)</h3>
       <Ellipse />
-      <h3 className='ui-header'>.circle(size, x, y)</h3>
+      <h3 className='ui-header'>.circle(size, cx, cy)</h3>
       <Circle />
-      <h3 className='ui-header'>.sector(x, y, radius, startAngle, endAngle)</h3>
+      <h3 className='ui-header'>.sector(cx, cy, radius, startAngle, endAngle)</h3>
       <Sector />
       <h3 className='ui-header'>
-        .segment(x, y, radius, startAngle, endAngle)
+        .segment(cx, cy, radius, startAngle, endAngle)
       </h3>
       <Segment />
-      <h3 className='ui-header'>.triangle(size, x, y)</h3>
+      <h3 className='ui-header'>.triangle(size, cx, cy)</h3>
       <Triangle />
       <h3 className='ui-header'>.polyline(points, relative = false)</h3>
       <Polyline />
       <h3 className='ui-header'>.polygon(points, relative = false)</h3>
       <Polygon />
-      {/* <h2>.grid()</h2>
-      <Grid /> */}
-      {/* <h2>combining shapes</h2>
-      <svg width={202} height={250}>
-        <path
-          d={new Path().grid(0, 0, 200, 200, 10, 10).toString()}
-          style={{ stroke: '#ccc' }}
-        />
-        <path
-          d={new Path().polyline(data.concat(data)).toString()}
-          style={{ stroke: 'green', strokeWidth: 2 }}
-        />
-      </svg> */}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

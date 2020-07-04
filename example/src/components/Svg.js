@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Svg = ({ children, width, height }) => {
   return (
@@ -10,7 +10,7 @@ const Svg = ({ children, width, height }) => {
     >
       {children}/
     </svg>
-  )
-}
+  );
+};
 
-export default Svg
+export default Svg;
