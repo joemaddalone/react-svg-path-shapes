@@ -4,7 +4,11 @@
   "description": "Shape macros for react-svg-path",
   "author": "joemaddalone",
   "license": "MIT",
-  "repository": "joemaddalone/react-svg-path-shapes",
+  "homepage": "https://joemaddalone.github.io/react-svg-path-shapes/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joemaddalone/react-svg-path-shapes"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
