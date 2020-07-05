@@ -10,82 +10,67 @@ import {
   RegPolygon,
   Triangle,
   Polyline
-} from './components/demos';
+} from './components/demos/basic';
+
+import Pie from './components/demos/complex/Pie';
+import Donut from './components/demos/complex/Donut';
+import SparkLine from './components/demos/complex/SparkLine';
+import Gear from './components/demos/complex/Gear';
 
 const App = () => {
+  const basicDemos = [
+    Rect,
+    Square,
+    Triangle,
+    RegPolygon,
+    Ellipse,
+    Circle,
+    Sector,
+    Segment,
+    Polyline,
+    Polygon
+  ];
+
+  const pieData = [
+    {
+      color: 'red',
+      percent: 20
+    },
+    {
+      color: 'orange',
+      percent: 30
+    },
+    {
+      color: 'yellow',
+      percent: 50
+    }
+  ];
+
   return (
     <div>
       <h2 className='ui-header'>react-svg-path-shapes</h2>
       <a href='https://github.com/joemaddalone/react-svg-path-shapes'>
         https://github.com/joemaddalone/react-svg-path-shapes
       </a>
-      <h2 className='ui-header'>Demos</h2>
-      <h3 className='ui-header'>.rect(width, height, cx, cy)</h3>
-      <p>
-        .rect is drawn from center point (cx & cy). The cursor is then moved to
-        the center point.
-      </p>
-      <Rect />
-      <h3 className='ui-header'>.square(size, cx, cy)</h3>
-      <p>
-        .square is drawn from center point (cx & cy). The cursor is then moved
-        to the center point.
-      </p>
-      <Square />
-      <h3 className='ui-header'>.triangle(size, cx, cy)</h3>
-      <p>
-        .triangle draws an equilateral triangle from center point (cx & cy). The
-        cursor is then moved to the center point.
-      </p>
-      <Triangle />
-      <h3 className='ui-header'>.regPolygon(size, sides, cx, cy)</h3>
-      <p>
-        .regPolygon is drawn from center point (cx & cy). The cursor is then
-        moved to the center point.
-      </p>
-      <RegPolygon />
-      <h3 className='ui-header'>.ellipse(width, height, cx, cy)</h3>
-      <p>
-        .ellipse is drawn from center point (cx & cy). The cursor is then moved
-        to the center point.
-      </p>
-      <Ellipse />
-      <h3 className='ui-header'>.circle(size, cx, cy)</h3>
-      <p>
-        .circle is drawn from center points (cx & cy). The cursor is then moved
-        to the center points.
-      </p>
-      <Circle />
-      <h3 className='ui-header'>
-        .sector(cx, cy, radius, startAngle, endAngle)
-      </h3>
-      <p>
-        .sector is drawn from center point (cx & cy). The cursor is then moved
-        to the center point.
-      </p>
-      <Sector />
-      <h3 className='ui-header'>
-        .segment(cx, cy, radius, startAngle, endAngle)
-      </h3>
-      <p>
-        .segment is drawn from center point (cx & cy). The cursor is then moved
-        to the center point.
-      </p>
-      <Segment />
-      <h3 className='ui-header'>.polyline([points], relative = false)</h3>
-      <p>
-        .polyline accepts an array of [x, y] coordinates and then draws lines
-        connecting those points. The path will start from the first point and
-        end on the last. points can be absolute or relative.
-      </p>
-      <Polyline />
-      <h3 className='ui-header'>.polygon([points])</h3>
-      <p>
-        .polygon accepts an array of [x, y] coordinates and then draws lines
-        connecting those points. The path will start from the first point and
-        end on the first point - closing the shape.
-      </p>
-      <Polygon />
+      <div className='basic-shapes'>
+        <h2 className='ui-header'>Basic Shapes</h2>
+        {basicDemos.map((C, i) => (
+          <C key={i} />
+        ))}
+      </div>
+      <h2 className='ui-header'>Combining Shapes</h2>
+      <div>
+        <h3 className='ui-header'>multiple .sectors</h3>
+        <Pie size={150} cx={80} cy={80} data={pieData} />
+        <h3 className='ui-header'>multiple .segments</h3>
+        <Donut width={25} size={150} cx={80} cy={80} data={pieData} />
+        <h3 className='ui-header'>fitted .polyline</h3>
+        <SparkLine
+          width={300}
+          height={150}
+          data={[-10, -45, 10, 0, 35, 10, -9, 25, 15, 75]}
+        />
+      </div>
     </div>
   );
 };

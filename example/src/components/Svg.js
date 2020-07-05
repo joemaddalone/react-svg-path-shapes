@@ -8,7 +8,7 @@ const Svg = ({ children, width, height }) => {
       height={height}
       viewBox={`0 0 ${width} ${height}`}
     >
-      {children}/
+      {children}
     </svg>
   );
 };

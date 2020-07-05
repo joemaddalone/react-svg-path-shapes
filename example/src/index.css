@@ -1,5 +1,5 @@
 #root {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 10px;
   display: flex;
@@ -10,14 +10,14 @@ svg {
   background-color: #fff;
 }
 
-path {
+.basic-shapes path {
   fill: none;
   shape-rendering: geometricPrecision;
   stroke: rebeccapurple;
   stroke-width: 1;
 }
 
-path.filled {
+.basic-shapes path.filled {
   fill: #ddd;
   stroke-width: 0;
 }
@@ -35,8 +35,13 @@ h3 {
   border-top: 1px solid #ddd;
 }
 
-code {
-  margin: 8px;
-  padding: 8px;
-  background-color: #f8f8f8;
+h2 {
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
+
+.basic-block {
+  padding: 10px;
+
+}
+
