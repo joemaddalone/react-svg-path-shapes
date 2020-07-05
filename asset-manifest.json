@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-svg-path-shapes/static/css/main.8674656e.chunk.css",
-    "main.js": "/react-svg-path-shapes/static/js/main.3c674280.chunk.js",
-    "main.js.map": "/react-svg-path-shapes/static/js/main.3c674280.chunk.js.map",
-    "runtime-main.js": "/react-svg-path-shapes/static/js/runtime-main.3d307e97.js",
-    "runtime-main.js.map": "/react-svg-path-shapes/static/js/runtime-main.3d307e97.js.map",
-    "static/js/2.d2e54e55.chunk.js": "/react-svg-path-shapes/static/js/2.d2e54e55.chunk.js",
-    "static/js/2.d2e54e55.chunk.js.map": "/react-svg-path-shapes/static/js/2.d2e54e55.chunk.js.map",
+    "main.css": "/react-svg-path-shapes/static/css/main.3ffde4be.chunk.css",
+    "main.js": "/react-svg-path-shapes/static/js/main.a4a7acd2.chunk.js",
+    "main.js.map": "/react-svg-path-shapes/static/js/main.a4a7acd2.chunk.js.map",
+    "runtime-main.js": "/react-svg-path-shapes/static/js/runtime-main.01ef8786.js",
+    "runtime-main.js.map": "/react-svg-path-shapes/static/js/runtime-main.01ef8786.js.map",
+    "static/js/2.6fe8a61a.chunk.js": "/react-svg-path-shapes/static/js/2.6fe8a61a.chunk.js",
+    "static/js/2.6fe8a61a.chunk.js.map": "/react-svg-path-shapes/static/js/2.6fe8a61a.chunk.js.map",
     "index.html": "/react-svg-path-shapes/index.html",
-    "precache-manifest.8f7ddaa8b94031106cd3e3d7ad295a82.js": "/react-svg-path-shapes/precache-manifest.8f7ddaa8b94031106cd3e3d7ad295a82.js",
+    "precache-manifest.3c1e904f7edff417c41bbab7223d7b81.js": "/react-svg-path-shapes/precache-manifest.3c1e904f7edff417c41bbab7223d7b81.js",
     "service-worker.js": "/react-svg-path-shapes/service-worker.js",
-    "static/css/main.8674656e.chunk.css.map": "/react-svg-path-shapes/static/css/main.8674656e.chunk.css.map",
-    "static/js/2.d2e54e55.chunk.js.LICENSE.txt": "/react-svg-path-shapes/static/js/2.d2e54e55.chunk.js.LICENSE.txt"
+    "static/css/main.3ffde4be.chunk.css.map": "/react-svg-path-shapes/static/css/main.3ffde4be.chunk.css.map",
+    "static/js/2.6fe8a61a.chunk.js.LICENSE.txt": "/react-svg-path-shapes/static/js/2.6fe8a61a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3d307e97.js",
-    "static/js/2.d2e54e55.chunk.js",
-    "static/css/main.8674656e.chunk.css",
-    "static/js/main.3c674280.chunk.js"
+    "static/js/runtime-main.01ef8786.js",
+    "static/js/2.6fe8a61a.chunk.js",
+    "static/css/main.3ffde4be.chunk.css",
+    "static/js/main.a4a7acd2.chunk.js"
   ]
 }
