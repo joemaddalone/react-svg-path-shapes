@@ -1,6 +1,5 @@
 import React from 'react';
 import Path from 'react-svg-path-shapes';
-import Svg from '../../Svg';
 
 const Pie = ({ size, cx, cy, data }) => {
   const percentToDegree = (p) => (p / 100) * 360;
@@ -16,9 +15,7 @@ const Pie = ({ size, cx, cy, data }) => {
   });
 
   return (
-    <Svg width={160} height={160}>
       <g>{sectors}</g>
-    </Svg>
   );
 };
 
