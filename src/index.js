@@ -75,7 +75,7 @@ Path.macro('regPolygon', function (size, sides, cx, cy) {
       cx + r * Math.cos(theta),
       cy + r * Math.sin(theta)
     ]);
-  return this.polygon(points);
+  return this.polygon(points).M(cx, cy);
 });
 
 Path.macro('triangle', function (size, cx, cy) {
