@@ -1,5 +1,7 @@
 # react-svg-path-shapes
 
+This project has been merged with https://github.com/joemaddalone/react-svg-path -- use that instead - it has all the same functionality.
+
 ## Install
 
 ```bash
